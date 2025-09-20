@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aapda Mitra - Registration</title>
+  <link rel="stylesheet" href="css file/registration.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <button class="back-btn" onclick="handleBack()">
+        <svg class="back-icon" viewBox="0 0 24 24">
+          <path d="m12 19-7-7 7-7"/>
+          <path d="M19 12H5"/>
+        </svg>
+      </button>
+      <h1 class="page-title">Registration</h1>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="step-container">
+      <!-- Step 1: Role Selection -->
+      <div class="role-selection" id="step1">
+        <h2 class="step-title">Choose Your Role</h2>
+        <p class="step-subtitle">Select the role that best describes you to customize your registration experience</p>
+
+        <div class="role-cards">
+          <div class="role-card" data-role="citizen">
+            <div class="role-icon">👤</div>
+            <div class="role-name">Citizen</div>
+            <div class="role-description">Individual community member seeking disaster assistance and information</div>
+          </div>
+
+          <div class="role-card" data-role="authority">
+            <div class="role-icon">🏛️</div>
+            <div class="role-name">Authority</div>
+            <div class="role-description">Government official or emergency response personnel</div>
+          </div>
+
+          <div class="role-card" data-role="ngo">
+            <div class="role-icon">🤝</div>
+            <div class="role-name">NGO</div>
+            <div class="role-description">Non-governmental organization providing disaster relief services</div>
+          </div>
+        </div>
+
+        <div class="navigation-buttons">
+          <button class="btn btn-primary" id="continueBtn" disabled onclick="goToStep2()">Continue</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Details Form -->
+      <div class="details-section" id="step2">
+        <h2 class="form-section-title" id="formTitle">Registration Details</h2>
+
+        <form id="registrationForm">
+          <!-- Special Code Section (Authority/NGO only) -->
+          <div class="special-code-section" id="specialCodeSection" style="display: none;">
+            <div class="special-code-title" id="codeTitle"></div>
+            <div class="special-code-description" id="codeDescription"></div>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Enter Code" name="specialCode" id="specialCodeInput">
+            </div>
+          </div>
+
+          <!-- Basic Information -->
+          <div class="form-row single">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-input" placeholder="Enter your full name" name="fullName" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-input" placeholder="Enter your email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-input" placeholder="Enter your phone number" name="phone" required>
+            </div>
+          </div>
+
+          <div class="form-row single">
+            <div class="form-group">
+              <label class="form-label">Address</label>
+              <input type="text" class="form-input" placeholder="Enter your complete address" name="address" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">City</label>
+              <input type="text" class="form-input" placeholder="Enter your city" name="city" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">State</label>
+              <input type="text" class="form-input" placeholder="Enter your state" name="state" required>
+            </div>
+          </div>
+
+          <div class="form-row single">
+            <div class="form-group">
+              <label class="form-label">Zip Code</label>
+              <input type="text" class="form-input" placeholder="Enter your zip code" name="zipCode" required>
+            </div>
+          </div>
+
+          <div class="navigation-buttons">
+            <button type="button" class="btn btn-secondary" onclick="goToStep1()">Back</button>
+            <button type="submit" class="btn btn-primary"
+             onclick=" window.location.href = 'authoritydashboard.html'">Complete Registration</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="java script file/registration.js"></script>
+</body>
+</html>

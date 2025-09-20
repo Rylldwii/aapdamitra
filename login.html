@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aapda Mitra - Login</title>
+    <link rel="stylesheet" href="css file/login.css" />
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo-container">
+            <div class="logo">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <img src="assest/WhatsApp_Image_2025-09-14_at_23.07.37_6763d68f-removebg-preview.png"
+                        alt="Aapda Mitra Logo" class="logo">
+                </div>
+
+            </div>
+        </div>
+
+        <h1 class="app-title">Aapda Mitra</h1>
+        <p class="app-subtitle">Your Partner in Disaster Management</p>
+
+        <div class="button-container">
+            <button class="btn btn-primary" id="loginBtn" disabled
+                onclick="window.location.href='login2.html'">Login</button>
+            <button class="btn btn-primary" id="registerBtn" disabled   onclick="window.location.href='registration.html'">Register</button>
+        </div>
+
+        <div class="terms-container">
+            <label>
+                <input type="checkbox" id="termsCheckbox" />
+                I agree to the
+                <a href="#" class="terms-link" onclick="showTerms()">Terms of Service</a> and
+                <a href="#" class="terms-link" onclick="showPrivacy()">Privacy Policy</a>
+            </label>
+
+        </div>
+    </div>
+
+
+    <script src="java script file/login.js"></script>
+</body>
+
+</html>

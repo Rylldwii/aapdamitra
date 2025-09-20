@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.back-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateX(-2px);
+}
+
+.back-icon {
+    width: 20px;
+    height: 20px;
+    stroke: #2c3e50;
+    stroke-width: 2.5;
+    fill: none;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    flex: 1;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+    width: 50%;
+}
+
+.step-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Step 1 - Role Selection */
+.role-selection {
+    text-align: center;
+}
+
+.step-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.step-subtitle {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 48px;
+    line-height: 1.5;
+}
+
+.role-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.role-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 3px solid transparent;
+    border-radius: 16px;
+    padding: 32px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.role-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent, rgba(52, 152, 219, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-4px);
+    border-color: #3498db;
+    box-shadow: 0 12px 30px rgba(52, 152, 219, 0.2);
+}
+
+.role-card:hover::before {
+    opacity: 1;
+}
+
+.role-card.selected {
+    border-color: #3498db;
+    background: rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+}
+
+.role-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 50%;
+    color: white;
+    font-size: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.role-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.role-description {
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+}
+
+/* Step 2 - Details Form */
+.details-section {
+    display: none;
+}
+
+.form-section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.form-row.single {
+    display: block;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 15px;
+    border: 2px solid rgba(149, 165, 166, 0.2);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #2c3e50;
+}
+
+.form-input::placeholder {
+    color: #adb5bd;
+    font-weight: 400;
+}
+
+.form-input:focus {
+    border-color: #3498db;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    transform: translateY(-1px);
+}
+
+.special-code-section {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(46, 204, 113, 0.1));
+    border: 2px solid rgba(52, 152, 219, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.special-code-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.special-code-icon {
+    width: 24px;
+    height: 24px;
+    background: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.special-code-description {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.btn {
+    flex: 1;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+    background: rgba(127, 140, 141, 0.1);
+    color: #7f8c8d;
+    border: 2px solid rgba(127, 140, 141, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(127, 140, 141, 0.2);
+    color: #2c3e50;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 16px;
+    }
+
+    .step-container {
+        padding: 32px 24px;
+    }
+
+    .role-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .step-title {
+        font-size: 28px;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
