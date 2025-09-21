@@ -110,12 +110,29 @@
               <input type="text" class="form-input" placeholder="Enter your zip code" name="zipCode" required>
             </div>
           </div>
+          <div class="form-row otp-section">
+  <div class="form-group">
+    <button type="button" class="btn btn-secondary" onclick="sendOTP()">Send OTP</button>
+  </div>
+</div>
+
+<div class="form-row otp-verify" id="otpSection" style="display: none;">
+  <div class="form-group">
+    <label class="form-label">Enter OTP</label>
+    <input type="text" class="form-input" placeholder="Enter OTP" id="otpInput">
+  </div>
+  <div class="form-group">
+    <button type="button" class="btn btn-primary" onclick="verifyOTP()">Verify OTP</button>
+  </div>
+</div>
+
 
           <div class="navigation-buttons">
             <button type="button" class="btn btn-secondary" onclick="goToStep1()">Back</button>
             <button type="submit" class="btn btn-primary"
-             onclick=" window.location.href = 'authoritydashboard.html'">Complete Registration</button>
+             >Complete Registration</button>
           </div>
+          
         </form>
       </div>
     </div>

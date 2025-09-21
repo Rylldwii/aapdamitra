@@ -40,9 +40,7 @@ document.querySelectorAll(".language-option").forEach((option) => {
 // Continue button functionality
 document.getElementById("continueBtn").addEventListener("click", function () {
   if (selectedLanguage) {
-    alert(
-      `Selected language: ${selectedLanguage}\n\nProceeding to the main application...`
-    );
+  
     // Replace alert with navigation or app load
   }
 });

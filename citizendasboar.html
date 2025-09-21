@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Safety Dashboard</title>
+    <link rel="stylesheet" href="css file/citizendasboard.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="profile">
+                <div class="avatar" id="profileAvatar">
+                    <img id="profileImage" src="assest/WhatsApp_Image_2025-09-14_at_23.07.37_6763d68f-removebg-preview.png" alt="Profile Avatar">
+                </div>
+                <div class="profile-info">
+                    <h1 id="profileName">Priya Sharma</h1>
+                    <div class="status">Citizen</div>
+                    <div class="last-reported">Last reported: 2 days ago</div>
+                </div>
+                <button class="settings-btn" onclick="showPage('settings')">⚙️</button>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Home Page -->
+            <div id="home-page" class="page active">
+                <div class="section">
+                    <h2 class="section-title">Quick Actions</h2>
+                    <div class="quick-actions">
+                        <button class="action-btn report-incident" onclick="showPage('report')">SOS / Report Incident</button>
+                        <button class="action-btn request-assistance" onclick="showPage('help')">Request Help</button>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Services</h2>
+                    <div class="services-grid">
+                        <div class="service-card" onclick="showPage('relief')">
+                            <div class="service-icon">🏥</div>
+                            <h3>Relief Services</h3>
+                            <p>Emergency medical aid & shelter</p>
+                        </div>
+                        <div class="service-card" onclick="showPage('volunteer')">
+                            <div class="service-icon">🤝</div>
+                            <h3>Volunteer & Donations</h3>
+                            <p>Help your community</p>
+                        </div>
+                        <div class="service-card" onclick="showPage('recovery')">
+                            <div class="service-icon">🔄</div>
+                            <h3>Recovery & Awareness</h3>
+                            <p>Post-disaster support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Recent Alerts</h2>
+                    <div class="alerts">
+                        <div class="alert-item flood-warning">
+                            <div class="alert-icon flood-icon">⚠️</div>
+                            <div class="alert-content">
+                                <h3>High water levels in the river</h3>
+                                <p>Flood Warning</p>
+                            </div>
+                        </div>
+                        <div class="alert-item earthquake-warning">
+                            <div class="alert-icon earthquake-icon">📈</div>
+                            <div class="alert-content">
+                                <h3>Minor tremors felt in the region</h3>
+                                <p>Earthquake Advisory</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Page -->
+            <div id="settings-page" class="page">
+                <h2 class="section-title">Settings</h2>
+                <div class="settings-section">
+                    <div class="settings-item" onclick="notificationSettings()">
+                        <div class="settings-item-info">
+                            <span class="settings-icon">🔔</span>
+                            <h3>Notifications</h3>
+                        </div>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="locationSettings()">
+                        <div class="settings-item-info">
+                            <span class="settings-icon">📍</span>
+                            <h3>Location Access</h3>
+                        </div>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="emergencyContacts()">
+                        <div class="settings-item-info">
+                            <span class="settings-icon">📞</span>
+                            <h3>Emergency Contacts</h3>
+                        </div>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="privacyPolicy()">
+                        <div class="settings-item-info">
+                            <span class="settings-icon">🔒</span>
+                            <h3>Privacy Policy</h3>
+                        </div>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="termsOfService()">
+                        <div class="settings-item-info">
+                            <span class="settings-icon">📜</span>
+                            <h3>Terms of Service</h3>
+                        </div>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <div class="settings-item" onclick="helpSupport()">
+                        <div class="settings-item-info">
+                            <span class="settings-icon">❓</span>
+                            <h3>Help & Support</h3>
+                        </div>
+                        <span class="settings-arrow">›</span>
+                    </div>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="nav-item active" onclick="showPage('home')">
+                <span class="nav-icon">🏠</span>
+                <span>Home</span>
+            </button>
+            <button class="nav-item" onclick="showPage('report')">
+                <span class="nav-icon">📝</span>
+                <span>Report</span>
+            </button>
+            <button class="nav-item" onclick="showPage('alerts')">
+                <span class="nav-icon">🔔</span>
+                <span>Alerts</span>
+            </button>
+            <button class="nav-item" onclick="showPage('profile')">
+                <span class="nav-icon">👤</span>
+                <span>Profile</span>
+            </button>
+        </div>
+
+        <!-- SOS Button -->
+        <button class="sos-button" onclick="emergencySOS()">SOS</button>
+
+        <!-- Profile Image Upload Input (Hidden) -->
+        <input type="file" id="uploadImage" accept="image/*" style="display:none" />
+
+        <!-- Toast Notifications -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <script src="java script file/citizendasboard.js"></script>
+</body>
+</html>
