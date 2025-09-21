@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e2e8f0;
+    background: white;
+}
+
+.hamburger {
+    font-size: 20px;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.dashboard-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.content {
+    padding: 24px;
+    padding-bottom: 120px;
+}
+
+.section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: #f1f5f9;
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 4px solid #3b82f6;
+}
+
+.stat-card.assisted {
+    border-left-color: #10b981;
+    background: #f0fdf4;
+}
+
+.stat-card.supplies {
+    border-left-color: #f59e0b;
+    background: #fffbeb;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.donations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.donation-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.donation-amount {
+    font-size: 28px;
+    font-weight: 700;
+    color: #059669;
+    margin-bottom: 4px;
+}
+
+.donation-label {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.supplies-amount {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.volunteer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.volunteer-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.volunteer-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 4px;
+}
+
+.volunteer-label {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+    transition: all 0.2s;
+}
+
+.activity-item:hover {
+    background: #f1f5f9;
+    transform: translateY(-1px);
+}
+
+.activity-item.donation {
+    border-left-color: #10b981;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #dbeafe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #3b82f6;
+    flex-shrink: 0;
+}
+
+.activity-icon.donation {
+    background: #d1fae5;
+    color: #10b981;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.activity-description {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    z-index: 1000;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+    border: none;
+    background: none;
+}
+
+.nav-item.active {
+    color: #3b82f6;
+}
+
+.nav-item:hover {
+    color: #3b82f6;
+}
+
+.nav-icon {
+    font-size: 20px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.operations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.operation-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.operation-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.operation-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.operation-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-planned {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.operation-details {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.operation-metrics {
+    display: flex;
+    gap: 20px;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.metric-label {
+    font-size: 12px;
+    color: #64748b;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .donations-grid,
+    .volunteer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .operations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding: 16px 20px;
+    }
+
+    .content {
+        padding: 20px;
+        padding-bottom: 120px;
+    }
+}

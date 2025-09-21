@@ -130,7 +130,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
   } else if(registrationData.role === 'authority'){
     window.location.href = 'authoritydashboard.html';
   } else if(registrationData.role === 'ngo'){
-    window.location.href = 'ngodashboard.html';
+    window.location.href = 'ngodasboard.html';
   }
 });
 

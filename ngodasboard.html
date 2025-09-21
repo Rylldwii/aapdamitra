@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Management Dashboard</title>
+  <link rel="stylesheet" href="css file/nogdasboard.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="hamburger">☰</div>
+      <div class="dashboard-title">Dashboard</div>
+      <div></div>
+    </div>
+
+    <div class="content">
+      <!-- Dashboard Page -->
+      <div id="dashboard-page" class="page active">
+        <div class="section">
+          <h2 class="section-title">Operations Overview</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-label">Active Missions</div>
+              <div class="stat-value">3</div>
+            </div>
+            <div class="stat-card assisted">
+              <div class="stat-label">People Assisted</div>
+              <div class="stat-value">1,250</div>
+            </div>
+            <div class="stat-card supplies">
+              <div class="stat-label">Supplies Distributed</div>
+              <div class="stat-value">5,000</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Donations & Resources</h2>
+          <div class="donations-grid">
+            <div class="donation-card">
+              <div class="donation-amount">$15,000</div>
+              <div class="donation-label">Funds Received</div>
+            </div>
+            <div class="donation-card">
+              <div class="supplies-amount">2,000 Items</div>
+              <div class="donation-label">Supplies Available</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Volunteer Management</h2>
+          <div class="volunteer-grid">
+            <div class="volunteer-card">
+              <div class="volunteer-number">50</div>
+              <div class="volunteer-label">Active Volunteers</div>
+            </div>
+            <div class="volunteer-card">
+              <div class="volunteer-number">10</div>
+              <div class="volunteer-label">New Applications</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Recent Activity</h2>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">🚁</div>
+              <div class="activity-content">
+                <div class="activity-title">Relief Mission in Kerala</div>
+                <div class="activity-description">Assisted 200 people in flood-affected areas.</div>
+              </div>
+            </div>
+            <div class="activity-item donation">
+              <div class="activity-icon donation">💰</div>
+              <div class="activity-content">
+                <div class="activity-title">Donation Drive</div>
+                <div class="activity-description">Received $5,000 in donations for earthquake relief.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Operations Page -->
+      <div id="operations-page" class="page">
+        <h2 class="section-title">Active Operations</h2>
+        <div class="operations-grid">
+          <div class="operation-card">
+            <div class="operation-header">
+              <div class="operation-title">Flood Relief - Kerala</div>
+              <div class="operation-status status-active">Active</div>
+            </div>
+            <div class="operation-details">
+              Emergency response to severe flooding in coastal regions. 
+              Rescue operations and relief distribution ongoing.
+            </div>
+            <div class="operation-metrics">
+              <div class="metric">
+                <div class="metric-value">487</div>
+                <div class="metric-label">Rescued</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">15</div>
+                <div class="metric-label">Teams</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">3</div>
+                <div class="metric-label">Days</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="operation-card">
+            <div class="operation-header">
+              <div class="operation-title">Earthquake Response - Gujarat</div>
+              <div class="operation-status status-active">Active</div>
+            </div>
+            <div class="operation-details">
+              Providing medical aid and temporary shelter to 
+              earthquake-affected communities.
+            </div>
+            <div class="operation-metrics">
+              <div class="metric">
+                <div class="metric-value">623</div>
+                <div class="metric-label">Assisted</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">8</div>
+                <div class="metric-label">Teams</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">5</div>
+                <div class="metric-label">Days</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="operation-card">
+            <div class="operation-header">
+              <div class="operation-title">Cyclone Preparedness - Odisha</div>
+              <div class="operation-status status-planned">Planned</div>
+            </div>
+            <div class="operation-details">
+              Pre-positioning resources and teams for expected 
+              cyclone landfall next week.
+            </div>
+            <div class="operation-metrics">
+              <div class="metric">
+                <div class="metric-value">12</div>
+                <div class="metric-label">Teams Ready</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">50K</div>
+                <div class="metric-label">Supplies</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">2</div>
+                <div class="metric-label">Days ETA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Donations Page -->
+      <div id="donations-page" class="page">
+        <h2 class="section-title">Donation Management</h2>
+        <div class="donations-grid">
+          <div class="donation-card">
+            <div class="donation-amount">$48,750</div>
+            <div class="donation-label">Total Funds Received</div>
+          </div>
+          <div class="donation-card">
+            <div class="donation-amount">$33,250</div>
+            <div class="donation-label">Funds Allocated</div>
+          </div>
+          <div class="donation-card">
+            <div class="donation-amount">$15,500</div>
+            <div class="donation-label">Available Balance</div>
+          </div>
+          <div class="donation-card">
+            <div class="supplies-amount">8,500 Items</div>
+            <div class="donation-label">Total Supplies Received</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title">Recent Donations</h3>
+          <div class="activity-list">
+            <div class="activity-item donation">
+              <div class="activity-icon donation">💰</div>
+              <div class="activity-content">
+                <div class="activity-title">Corporate Donation - Tech Corp</div>
+                <div class="activity-description">$10,000 donation for disaster relief operations</div>
+              </div>
+            </div>
+            <div class="activity-item donation">
+              <div class="activity-icon donation">📦</div>
+              <div class="activity-content">
+                <div class="activity-title">Supply Donation - Local NGO</div>
+                <div class="activity-description">500 blankets and 200 food packages donated</div>
+              </div>
+            </div>
+            <div class="activity-item donation">
+              <div class="activity-icon donation">💰</div>
+              <div class="activity-content">
+                <div class="activity-title">Community Fundraiser</div>
+                <div class="activity-description">$3,500 raised through online crowdfunding</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volunteers Page -->
+      <div id="volunteers-page" class="page">
+        <h2 class="section-title">Volunteer Management</h2>
+        <div class="volunteer-grid">
+          <div class="volunteer-card">
+            <div class="volunteer-number">127</div>
+            <div class="volunteer-label">Total Registered</div>
+          </div>
+          <div class="volunteer-card">
+            <div class="volunteer-number">68</div>
+            <div class="volunteer-label">Currently Active</div>
+          </div>
+          <div class="volunteer-card">
+            <div class="volunteer-number">25</div>
+            <div class="volunteer-label">New Applications</div>
+          </div>
+          <div class="volunteer-card">
+            <div class="volunteer-number">1,240</div>
+            <div class="volunteer-label">Total Hours Logged</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title">Volunteer Activities</h3>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">🤝</div>
+              <div class="activity-content">
+                <div class="activity-title">Distribution Team - Sector 12</div>
+                <div class="activity-description">15 volunteers distributed food and supplies to 200 families</div>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">🏥</div>
+              <div class="activity-content">
+                <div class="activity-title">Medical Support Team</div>
+                <div class="activity-description">8 medical volunteers provided aid at relief camps</div>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">🚛</div>
+              <div class="activity-content">
+                <div class="activity-title">Logistics Team</div>
+                <div class="activity-description">12 volunteers helped organize and transport supplies</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Page -->
+      <div id="profile-page" class="page">
+        <h2 class="section-title">Admin Profile</h2>
+        <div class="donation-card" style="max-width: 500px;">
+          <div class="activity-content">
+            <div class="activity-title" style="margin-bottom: 8px;">Emergency Management Officer</div>
+            <div class="activity-description">Regional Disaster Response Coordinator</div>
+            <div class="activity-description">admin@emergency.gov.in</div>
+            <div class="activity-description">+91 98765 43210</div>
+          </div>
+        </div>
+
+        <div class="section" style="margin-top: 24px;">
+          <h3 class="section-title">System Settings</h3>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">🔔</div>
+              <div class="activity-content">
+                <div class="activity-title">Notification Settings</div>
+                <div class="activity-description">Manage alert preferences and notifications</div>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">👥</div>
+              <div class="activity-content">
+                <div class="activity-title">User Management</div>
+                <div class="activity-description">Manage admin users and permissions</div>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">📊</div>
+              <div class="activity-content">
+                <div class="activity-title">Generate Reports</div>
+                <div class="activity-description">Create operational and activity reports</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+      <button class="nav-item active" onclick="showPage('dashboard')">
+        <span class="nav-icon">📊</span>
+        <span>Dashboard</span>
+      </button>
+      <button class="nav-item" onclick="showPage('operations')">
+        <span class="nav-icon">⚡</span>
+        <span>Operations</span>
+      </button>
+      <button class="nav-item" onclick="showPage('donations')">
+        <span class="nav-icon">💰</span>
+        <span>Donations</span>
+      </button>
+      <button class="nav-item" onclick="showPage('volunteers')">
+        <span class="nav-icon">🤝</span>
+        <span>Volunteers</span>
+      </button>
+      <button class="nav-item" onclick="showPage('profile')">
+        <span class="nav-icon">👤</span>
+        <span>Profile</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="java script file/ngodashboard.js"></script>
+</body>
+</html>
